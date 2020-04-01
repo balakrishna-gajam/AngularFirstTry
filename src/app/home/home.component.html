@@ -1,0 +1,88 @@
+<html ng-app>
+
+    
+
+    <body>
+        <p>home works!</p>
+
+        <div style="background-color: blanchedalmond; padding: 20px;" class="divClass">
+            
+            <input type="button" (click)="clickCountIncrease()" value="Increase Count">&nbsp;
+            <input type="button" (click)="clickCountDecrease()" value="Decrease Count"> <br/>
+
+            Current value is {{countVariable}}
+
+        </div>
+        <br/>
+        <div style="background-color: blanchedalmond; padding: 20px;" class="divClass">
+            
+            
+            <input type="text" [(ngModel)]="userName" > <br/> 
+
+            Entered UserName  {{userName}}
+
+        </div>
+        <br/>
+
+        <!-- ng-template ngif and ngIfElse -->
+        <div style="background-color: blanchedalmond; padding: 20px;" class="divClass">
+            
+            <ng-template [ngIf]="countVariable >= countLimit" [ngIfElse]="none" >
+                clicked count is greater than {{countLimit}}
+            </ng-template>
+            
+            <ng-template #none>
+                clicked count is less than {{countLimit}} 
+            </ng-template>
+
+        </div>
+
+
+    <!--inline style condition clause-->
+
+    <div style="background-color: blanchedalmond; padding: 20px;" class="divClass">
+        <div [style.background-color]="countVariable >= countLimit ? 'yellow' : 'pink'">
+            inline style condition clause check
+        </div>   
+
+    </div>
+
+    <!--inline but multiple style condition clause-->
+    <br>
+    <div style="background-color: blanchedalmond; padding: 20px;" class="divClass">
+        
+        <div [ngStyle]="{
+            'background-color': countVariable >= countLimit ? 'Yellow' : 'pink',
+            'font-size' :  countVariable >= countLimit ? '5' : '3'
+        }" >
+            inline but multiple styles condition clause check
+        </div>   
+
+    </div>
+
+    <br>
+    <!-- single class   -->
+    <div style="background-color: blanchedalmond; padding: 20px;" class="divClass">
+        
+        <div [class.diVClassName]="countVariable >= countLimit " >
+            single class div block
+        </div>   
+
+    </div>
+
+    <br>
+    <!-- multi class   -->
+    <div style="background-color: blanchedalmond; padding: 20px;" class="divClass">
+        
+        <div [ngClass]="setMultiClasses()" >
+            multi class div block
+        </div>   
+
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<html ng-app>
+    <script>
+        console.log(1)
+    </script>
+    <p>list works!</p>
+
+     <ul *ngIf="jsonOfBeers">
+        <li *ngFor="let drink of jsonOfBeers">
+            <p>{{drink.name}} </p>
+            <p>{{drink.country}} </p>
+            <a href="{{drink.website_url}}">WebSite </a>
+        </li>
+     </ul>
+
+</html>

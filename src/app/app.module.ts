@@ -7,13 +7,17 @@ import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { FormsModule  } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
+import { MyFirstComponentComponent } from './my-first-component/my-first-component.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
     HomeComponent,
-    ListComponent
-  ],
+    ListComponent,
+      MyFirstComponentComponent,
+      ChildComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

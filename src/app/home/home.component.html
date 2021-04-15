@@ -1,6 +1,5 @@
 <html ng-app>
-
-    
+  
 
     <body>
         <p>home works!</p>
@@ -35,6 +34,14 @@
                 clicked count is less than {{countLimit}} 
             </ng-template>
 
+            <ng-template [ngIf]="countVariable >= countLimit" [ngIfElse]="none" >
+                clicked count is greater than {{countLimit}}
+            </ng-template>
+            
+            <ng-template #none>
+                clicked count is less than {{countLimit}} 
+            </ng-template>
+
         </div>
 
 
@@ -56,6 +63,7 @@
             'font-size' :  countVariable >= countLimit ? '5' : '3'
         }" >
             inline but multiple styles condition clause check
+            <!-- {{'5'+4*'5'}} -->
         </div>   
 
     </div>

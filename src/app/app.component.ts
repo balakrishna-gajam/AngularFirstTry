@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'GB Krishna - AngularPro';
+  appCompName = "gbkrishna";
+
+  public childEventReceiver(data){
+      console.log('hi child.. its parent... iam receiving you.. '+data)
+  }
+
 }

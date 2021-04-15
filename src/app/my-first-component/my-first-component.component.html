@@ -1,0 +1,77 @@
+<p>
+  my-first-component works!
+  {{myName}}
+<br/>
+  {{methodName(myName) | uppercase}}
+  {{methodName(myName).length}}
+</p>
+
+<input type="text" [id]='testId' />
+<input type="text" id={{testId}} />
+
+<div [class.divClassName]="classTrue">its test one</div>
+
+<div [ngStyle]="styleProps">multiple styles</div>
+
+<br/>
+
+<button (click)="m1($event)">Click</button>
+{{sampleDivContent}}
+<br/>
+
+<select (change)="m1($event)">
+  <option>1</option>
+  <option>2</option>
+</select>
+
+{{sampleDivContent}}
+
+<br/><br/><br/>
+____________________________________________________________
+<br/>
+<b>Template Driven variable.   </b>
+<br/>
+
+<input #itsInputTag />
+
+<button (click)="inputMethod(itsInputTag)">Click</button>
+
+<br/><br/><br/>
+____________________________________________________________
+<br/>
+<b>Two way binding </b>
+<br/>
+
+<input [(ngModel)]="myName"/>
+
+<br/>
+<b>Two way binding </b>
+<br/>
+
+
+____________________________________________________________
+<br/>
+<b>ngif </b>
+<br/>
+
+<div *ngIf="i == 0; else elseblock">
+  asdfasd
+</div>
+<div #elseblock>
+  else block
+</div>
+
+<div *ngFor="let item of arr; index as i">
+  {{i }} ---{{item}},
+</div>
+
+
+
+
+
+
+
+
+
+
+

@@ -3,3 +3,6 @@
  <a href="list"> Contact us </a>
 
 <router-outlet></router-outlet>
+
+
+<app-child [parentData]="appCompName" (childEvent)="childEventReceiver($event)" ></app-child>
